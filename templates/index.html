@@ -135,11 +135,13 @@
 			</label>
 		</div>
 
-		<form id="myForm" enctype="multipart/form-data">
-			<input type = "submit" value = "提交选择"></input>
-		</form>
+		<button class = "btn btn-default" id = "choices">提交选择</button>
 
+		<input type = "file"  value = "传回report" name = "file" id = "report" style = "display:none"></input>
+		<button class = "btn btn-default" disabled = "disabled" id = "choose-report">选择report</button>
+		<button class = "btn btn-default" disabled = "disabled" id = "return-report">上传report</button>
 
+		<div id = "msg"></div>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
 		<script src="js/index.js"></script>
 	</body>

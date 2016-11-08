@@ -1,6 +1,7 @@
 $(function(){
     var file_collection = [];
-    var target_url = "choices";
+    var target_url_file = "/upload_file";
+    var target_url_param = "/upload_param";
 
     $(".checkbox input").on("click", function(){
         $select = $(this).parent("label").parent("div").next("form");
@@ -52,25 +53,47 @@ $(function(){
     });
 
 
-
-    $(document).on("submit", "form", function(e){
-        e.preventDefault();
+    $("#choices").click(function(){
         var choices = {};
         appendChoicesToObjectChoices(choices);
 
-
         $.ajax({
             type: "post",
-            url: target_url,
+            url: target_url_param,
             data: choices,
         }).done(function(res){
-            if (res != "fail")
+            if (res != "fail"){
                 window.open(res);
-            window.open(upload.html);
+                $("#return-report").removeAttr("disabled");
+                $("#choose-report").removeAttr("disabled");
+                $("#msg").text("请修改report并回传");
+            }
         }).fail(function(res){
             console.log("fail");
         });
-       
+    });
+
+    $("#choose-report").click(function(){
+        $('#report').click();
+    });
+
+    $("#return-report").click(function(){
+        $.ajax({
+            type: "post",
+            url: target_url_file,
+            data: new FormData($("#report")[0]),
+            processData: false,
+            contentType: false
+        }).done(function(res){
+            if (res != "fail"){
+                 $("#return-report").attr("disabled", "disabled");
+                 $("#choose-report").attr("disabled", "disabled");
+                 $("#msg").text("report已上传成功");
+            }
+               
+        }).fail(function(res){
+            $("#msg").text("上传report失败");
+        });
     });
 
 
