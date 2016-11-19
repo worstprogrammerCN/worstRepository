@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="css/text" href="css/index.css">
+    </head>
+    <body>
+		<style>
+			#star{
+				position:fixed;
+				left:200px;
+			}
+		</style>
+        <ul id="scene">
+		  <li class="layer" data-depth="0.00"><img src="1.png"></li>
+		  <li class="layer" data-depth="1.00" id = "star"><img src="s.png"></li>
+		  <li class="layer" data-depth="1.00"><img src="s.png"></li>
+		</ul>
+        <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+		<script src="js/parallax.js"></script>
+        <script src="js/index.js"></script>
+		<script>
+			var scene = document.getElementById('scene');
+			var parallax = new Parallax(scene);
+		</script>
+    </body>
+</html>
