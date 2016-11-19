@@ -10,6 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "css-loader": "^0.26.0",
-    "style-loader": "^0.13.1"
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3"
   }
 }

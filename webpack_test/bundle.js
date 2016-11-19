@@ -44,9 +44,8 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1) // 载入 style.css
-	document.write('It works.')
-	document.write(__webpack_require__(5)) 
+	__webpack_require__(1) // 载入 index.less
+
 
 /***/ },
 /* 1 */
@@ -64,8 +63,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./node_modules/css-loader/index.js!./style.css", function() {
-				var newContent = require("!!./node_modules/css-loader/index.js!./style.css");
+			module.hot.accept("!!./node_modules/css-loader/index.js!./node_modules/less-loader/index.js!./index.less", function() {
+				var newContent = require("!!./node_modules/css-loader/index.js!./node_modules/less-loader/index.js!./index.less");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -83,7 +82,7 @@
 
 
 	// module
-	exports.push([module.id, "body { background: yellow; }", ""]);
+	exports.push([module.id, ".red {\n  color: red;\n}\n", ""]);
 
 	// exports
 
@@ -395,12 +394,6 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
-
-/***/ },
-/* 5 */
-/***/ function(module, exports) {
-
-	module.exports = 'It works from module.js.'
 
 /***/ }
 /******/ ]);

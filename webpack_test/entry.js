@@ -1,3 +1,1 @@
-require("!style!css!./style.css") // 载入 style.css
-document.write('It works.')
-document.write(require('./module.js')) 
+require("./index.less") // 载入 index.less
