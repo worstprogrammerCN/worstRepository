@@ -337,47 +337,6 @@
 	})
 	})
 
-
-			// var button_activated_on_click = function(){
-			// 	var index_in_click_queue = click_queue.indexOf($(this.dom).index());
-			// 	console.log($(this.dom).index());
-			// 	console.log(index_in_click_queue);
-			// 	this.waiting = true;
-			// 	this.clicked = true;
-			// 	if (all_buttons_clicked())
-			// 		disable_all_button();
-			// 	add_waiting_tag();
-			// 	$.get("http:127.0.0.1:8000/?date=" + (new Date()).getTime(), function(data, status){
-			// 		console.log(status);
-			// 		if (status == "success"){
-			// 			that.has_number = true;
-			// 			that.number = parseInt(data);
-			// 			tag_display_number(data);
-			// 			activate_other_button();
-			// 			if (all_buttons_get_its_number())
-			// 				$("#info-bar").trigger("all_buttons_get_its_number");
-			// 		}
-			// 		else {
-			// 			alert("连接失败");
-			// 			return;
-			// 		}
-			// 	});
-			// }
-
-			// $(this.dom).on("click", function(){
-			// 	console.log("clicked");
-			// 	if ($(this).hasClass("disabled"))
-			// 		return;
-			// 	if ($(this).hasClass("activated"))
-			// 		button_activated_on_click.bind(that)();
-
-			// });
-
-			
-			// $(this.dom).on("all_buttons_clicked", function(){
-			// 	disable_all_button();
-			// })
-
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
