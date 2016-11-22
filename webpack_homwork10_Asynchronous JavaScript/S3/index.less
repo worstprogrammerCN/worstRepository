@@ -1,0 +1,219 @@
+@grey : rgb(126, 126, 126);
+@blue : rgb(30, 70, 150);
+@red  : rgb(250, 60, 60);
+@light_green : #079E6E;
+@font_blue : rgb(35, 101, 134);
+@light_blue : rgb(217, 237, 246);
+@border_blue : rgb(191, 232, 240);
+@transition_fast : 0.2s;
+@delay_fast : 0.2s;
+@delay_middle : 0.5s;
+@delay_slow : 0.8s;
+
+@purple : rgb(150, 155, 210);
+
+#at-plus-container{
+	position:fixed;
+	width:40%;
+	height:100%;
+	left:30%;
+	#bottom-positioner{
+		position:absolute;
+		width:100%;
+		height:50%;
+		bottom:10%;
+		#button{
+			position: absolute;
+			left:30%;
+			bottom:50%;
+			width:100%;
+			#click-message{
+				transition: all @transition_fast;
+				transition-delay:@delay_middle;
+				position:absolute;
+				left:70px;
+				top:-30px;
+				text-align: center;
+				color:@font_blue;
+				font-size: 1.5em;
+				border:@border_blue 1px solid;
+				border-radius:10px;
+				background-color: @light_blue;
+				width:0px;
+				height:0px;
+			}
+			#info-bar{
+				transition: all @transition_fast;
+				transition-delay:@delay_middle;
+				position:absolute;
+				left:70px;
+				top:-30px;
+				margin-bottom:10px;
+				> div:first-child{
+					transition: all @transition_fast;
+					transition-delay:@delay_middle;
+					width:0px;
+					height:0px;
+					border-radius: 50%;
+					overflow:hidden;
+					background-color: @grey;
+					cursor: pointer;
+					.info-text{
+						position:relative;
+						top:40px;
+						font-family: "san-serif";
+						font-size:50px;
+						font-weight: bold;
+						text-align: center;
+						color:@light_green;
+					}
+				}
+			}
+			#control-ring-container{
+				position:absolute;
+				#control-ring{
+					li{
+						list-style-type: none;
+					}
+					.disabled{
+						background-color:@grey;
+					}
+					.activated{
+						background-color: @blue;
+					}
+					.wating{
+						background-color: @blue;
+					}
+					.button{
+						transition: all @transition_fast;
+						transition-delay:@delay_middle;
+						position:absolute;
+						left:70px;
+						top:-30px;
+						width:0px;
+						height:0px;
+						border-radius: 50%;
+						opacity: 0;
+						text-align: center;
+						cursor: pointer;
+						> div:first-child{
+							color:@light_green;
+							position: relative;
+							font-family: sans-serif;
+							font-weight: bold;
+							font-size: 26px;
+							top:4px;
+						}
+					}
+					.unread{
+						position:absolute;
+						top:-5px;
+						right:-12px;
+						width:20px;
+						height:20px;
+						text-align: center;
+						color:white;
+						font-family: sans-serif;
+						font-weight: bold;
+						border-radius: 50%;
+						background-color: @red;
+					}
+				}
+			}
+			.apb{
+				position: absolute;
+				left:60px;
+				top:-50px;
+				.icon{
+					transition: all @transition_fast;
+					transition-delay:@delay_slow;
+					width:40px;
+					height:40px;
+					border-radius:50%;
+					background-color: @purple;
+					background-image: url('../images/atplus_white.png');
+					background-size: 70% 50%;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+			}
+			&:hover{
+				#click-message{
+					transition: all @transition_fast;
+					transition-delay:@delay_fast;
+					position:absolute;
+					left:40px;
+					top:-260px;
+					width:100px;
+					height:1.3em;
+
+				}
+				#info-bar{
+					transition: all @transition_fast;
+					transition-delay:@delay_fast;
+					position:absolute;
+					left:10px;
+					top:-220px;
+					margin-bottom:10px;
+					> div{
+						border-radius: 50%;
+						transition: all @transition_fast;
+						transition-delay:@delay_fast;
+						width:150px;
+						height:150px;
+					}
+				}
+				#control-ring-container{
+					position:absolute;
+					#control-ring{
+						.button{
+							transition:all @transition_fast;
+							transition-delay:@delay_fast;
+							position:absolute;
+							width:37px;
+							height:37px;
+							opacity:1;
+						}
+						.mask{
+							top:-80px;
+							left:-5px;
+						}
+						.history{
+							top:-33px;
+							left:-17px;
+						}
+						.message{
+							top:14px;
+							left:0px;
+						}
+						.setting{
+							top:40px;
+							left:40px;
+						}
+						.sign{
+							top:35px;
+							left:95px;
+						}
+					}
+				}
+				.apb{
+					position: absolute;
+					left:60px;
+					top:-50px;
+					.icon{
+						transition:all @transition_fast;
+						transition-delay:@delay_fast;
+						width:60px;
+						height:60px;
+						border-radius:50%;
+						background-color: @blue;
+						background-image: url('../images/atplus_green.png');
+						background-size: 70% 50%;
+						background-repeat: no-repeat;
+						background-position: center;
+					}
+				}
+			}
+		}
+	}
+}
