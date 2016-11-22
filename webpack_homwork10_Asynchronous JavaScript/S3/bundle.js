@@ -154,7 +154,7 @@
 				if (all_buttons_clicked())
 					disable_all_button();
 				add_waiting_tag();
-				var get_request = $.get("http:127.0.0.1:8000/?date=" + (new Date()).getTime(), function(data, status){
+				var get_request = $.get("/?date=" + (new Date()).getTime(), function(data, status){
 					console.log(status);
 					if (status == "success"){
 						that.has_number = true;

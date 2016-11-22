@@ -130,7 +130,7 @@
 		$(this).data("waiting", true).data("activated", true);
 		add_waiting_tag.call(this);
 		disable_all_button();
-		var request = $.get("http://127.0.0.1:8000/?data=" + (new Date()).getTime(), function(data, status){
+		var request = $.get("/?data=" + (new Date()).getTime(), function(data, status){
 			try{
 				$(".icon").data("request_queue")[0] = null;
 				current_sum += parseInt(data);
@@ -162,7 +162,7 @@
 		$(this).data("waiting", true).data("activated", true);
 		add_waiting_tag.call(this);
 		disable_all_button();
-		var request = $.get("http://127.0.0.1:8000/?data=" + (new Date()).getTime(), function(data, status){
+		var request = $.get("/?data=" + (new Date()).getTime(), function(data, status){
 			try{
 				$(".icon").data("request_queue")[1] = null;
 				current_sum += parseInt(data);
@@ -193,7 +193,7 @@
 		$(this).data("waiting", true).data("activated", true);
 		add_waiting_tag.call(this);
 		disable_all_button();
-		var request = $.get("http://127.0.0.1:8000/?data=" + (new Date()).getTime(), function(data, status){
+		var request = $.get("/?data=" + (new Date()).getTime(), function(data, status){
 			try{
 				$(".icon").data("request_queue")[2] = null;
 				current_sum += parseInt(data);
@@ -224,7 +224,7 @@
 		$(this).data("waiting", true).data("activated", true);
 		add_waiting_tag.call(this);
 		disable_all_button();
-		var request = $.get("http://127.0.0.1:8000/?data=" + (new Date()).getTime(), function(data, status){
+		var request = $.get("/?data=" + (new Date()).getTime(), function(data, status){
 			try{
 				$(".icon").data("request_queue")[3] = null;
 				current_sum += parseInt(data);
@@ -255,7 +255,7 @@
 		$(this).data("waiting", true).data("activated", true);
 		add_waiting_tag.call(this);
 		disable_all_button();
-		var request = $.get("http://127.0.0.1:8000/?data=" + (new Date()).getTime(), function(data, status){
+		var request = $.get("/?data=" + (new Date()).getTime(), function(data, status){
 			try{
 				$(".icon").data("request_queue")[4] = null;
 				current_sum += parseInt(data);

@@ -133,7 +133,7 @@
 				this.waiting = true;
 				add_waiting_tag();
 				disable_all_button();
-				var get_request = $.get("http:127.0.0.1:8000/", function(data, status){
+				var get_request = $.get("/", function(data, status){
 					console.log(status);
 					if (status == "success"){
 						that.has_number = true;
