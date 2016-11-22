@@ -121,8 +121,7 @@
 	}
 
 	var execute_success = function(){
-		//return Math.random() > 0.5;
-		return false;
+		return Math.random() > 0.5;
 	}
 
 	var a_handler = function(event, click_queue, index, current_sum, request_queue){
