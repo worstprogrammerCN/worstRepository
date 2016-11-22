@@ -34,8 +34,8 @@ function getRandomNumber(limit){
 function response_number(req, res){
 	console.log("get number request!");
     var number = 1 + getRandomNumber(10);
-    var sleep_time = 1000;
-    //var sleep_time = 1000 + getRandomNumber(3000);
+    //var sleep_time = 1000;
+    var sleep_time = 1000 + getRandomNumber(3000);
     setTimeout(function() {
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.writeHead(200, {

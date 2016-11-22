@@ -60,7 +60,7 @@
 		$.each(click_queue, function(index, element){
 			click_queue_str += $(".button:eq(" + click_queue[index] + ")").find(":not(.unread)").text();
 		})
-		show_message(message);
+		show_message(click_queue_str);
 	}
 
 	var show_message = function(message){
@@ -323,6 +323,7 @@
 		click_queue.sort(function(){
 			return 0.5 - Math.random();
 		});
+		show_click_queue(click_queue);
 		$(".button:eq(" + click_queue[0] + ")").trigger("click", [click_queue, 0, 0]) // 点击队列中第0个对应的序号的按钮
 	}).on("mouseon mouseout", function(){
 		console.log($(".icon").data("request_queue"));
