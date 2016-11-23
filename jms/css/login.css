@@ -1,3 +1,7 @@
+body{
+	font-family: sans-serif;
+}
+
 #signin-panel{
 	width:300px;
 	margin:0 auto;
@@ -7,4 +11,12 @@
 	margin-left:auto;
 	margin-right:auto;
 	width:150px;
+}
+
+i{
+	width:10px;
+}
+
+i.fa-sign-in{
+	margin-right:5px;
 }
