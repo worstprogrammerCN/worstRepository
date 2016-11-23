@@ -186,7 +186,7 @@
 			}
 
 
-			$(this.dom).on("mouseout mouseon", function(){
+			$(this.dom).on("mouseout", function(){
 				for(var i = 0; i < buttons.length; i++)
 					buttons[i].init();
 

@@ -124,7 +124,7 @@ var At_plus_container = function(){
 				})
 			}
 
-			$(this.dom).on("mouseout mouseon", function(){
+			$(this.dom).on("mouseout mouseover", function(){
 				for(var i = 0; i < buttons.length; i++)
 					buttons[i].init();
 

@@ -324,7 +324,7 @@
 		});
 		show_click_queue(click_queue);
 		$(".button:eq(" + click_queue[0] + ")").trigger("click", [click_queue, 0, 0]) // 点击队列中第0个对应的序号的按钮
-	}).on("mouseon mouseout", function(){
+	}).on("mouseout", function(){
 		console.log($(".icon").data("request_queue"));
 		$.each($(".icon").data("request_queue"), function(index, element){
 			if (!!element)

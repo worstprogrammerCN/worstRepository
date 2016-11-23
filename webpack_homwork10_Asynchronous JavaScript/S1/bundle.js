@@ -148,7 +148,9 @@
 						return;
 					}
 				});
+				console.log(get_request);
 				get_requests[index] = get_request;
+				console.log(get_requests);
 			}
 
 			$(this.dom).on("click", function(){
@@ -166,13 +168,14 @@
 			this.dom = $(".icon")[0];
 
 			var stop_all_ajax = function(){
+				console.log(get_requests);
 				$.each(get_requests, function(index, element){
 					if (!!element)
 						element.abort();
 				})
 			}
 
-			$(this.dom).on("mouseout mouseon", function(){
+			$(this.dom).on("mouseout mouseover", function(){
 				for(var i = 0; i < buttons.length; i++)
 					buttons[i].init();
 
