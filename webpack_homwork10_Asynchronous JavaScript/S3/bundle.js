@@ -154,22 +154,27 @@
 				if (all_buttons_clicked())
 					disable_all_button();
 				add_waiting_tag();
-				var get_request = $.get("/?date=" + (new Date()).getTime(), function(data, status){
-					console.log(status);
-					if (status == "success"){
-						that.has_number = true;
-						that.number = parseInt(data);
-						get_requests[index] = null;
-						tag_display_number(data);
-						activate_other_button();
-						if (all_buttons_get_its_number())
-							$("#info-bar").trigger("all_buttons_get_its_number");
+				console.log("start request");
+				var get_request = $.ajax({
+					type : "GET",
+					url: "/",
+					success : function(data, status){
+						console.log(status);
+						if (status == "success"){
+							that.has_number = true;
+							that.number = parseInt(data);
+							get_requests[index] = null;
+							tag_display_number(data);
+							activate_other_button();
+							if (all_buttons_get_its_number())
+								$("#info-bar").trigger("all_buttons_get_its_number");
+						}
+						else {
+							alert("连接失败");
+							return;
+						}
 					}
-					else {
-						alert("连接失败");
-						return;
-					}
-				});
+				})
 				get_requests[index] = get_request;
 			}
 
